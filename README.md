@@ -44,8 +44,17 @@ Notes for Spring and Spring Boot
       - Configuration doesn't provide object its just used for spring to understand what object will be created.
       ## 3 ways of Configuration.
       - `XML Config (Manual)`: Low level.
+      ### Drawbacks of XML Config and Why you should not used XML Config
+         - Need to learn XML
+         - Cannot detect error in compile time
+         - Hard to read
+         - Need to switch between java file and xml file which is tiresome
+         - Condition based bean creation are not supported.
+   
       - `Java Config (Semi Automatic)`: Mid level.
       - `Annotation Config (Automatic)`: High level.
+      ### Advantages of Annotation Config and Why you should use Annotation Config instead of other two
+         - Annotation config solves all the drawbacks of both XML and Java config with used of @Component, @Autowired and @ComponentScan ant many more annotations.
    ii. Dependency Injection.
       - The configuration will will be given to the dependency injector
       - It will read/ parse the xml and validate.
@@ -54,8 +63,38 @@ Notes for Spring and Spring Boot
       - The logical memory partition created by container is called `IOC` it returns the reference of IOC Container as `BeanFactory`.
       - Basically The logical memory partition is the IOC Container.
    iii. Use beans and used whenever required.
-3. Application Context
-4. Bean Factory
+4. Application Context
+5. Bean Factory
    - Is the reference of Logical Memory Partition
+   - Spring Container contains all the object reference created by dependency injector.
+   - If you want an object get it from spring container instead of creating it yourself.
+   ## Bean factory heirarchy
+   ![Hi](https://github.com/Elleined/spring-notes/assets/111877930/f40d126a-1a5e-4580-910f-8db7f034163e)
 6. Aspect Oriented Programming
+
+# When you should use Constructor Injection and Setter Injection.
+## Constructor Injection (Preffered)
+1. Use `Dependency injection` if the dependency is required
+2. If Depedency is final
+3. Depedency Cyclic not supported
+
+## Setter Injection
+1. If Dependency is optional
+2. if depedency is not final
+3. Depedency cyclic are supported
+
+# Spring Scopes
+- Never inject a shorter lived bean into longer lived bean.
+
+1. Singleton
+- Use Singleton if data will be the same for every request.
+- Is different from singleton design pattern. Singleton spring is singleton per container/ per bean definition meaning every bean definition are different and singleton on their own not the whole application.
+
+3. Prototype
+- Use prototype if data will be different after every request.
+- Nutiple object per bean definition.
+- Spring container will have no reference to prototype it will just create and destroy.
+
+# [Annotations Notes](https://github.com/Elleined/spring-boot-annotations-notes)
+
 
