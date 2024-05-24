@@ -95,6 +95,31 @@ Notes for Spring and Spring Boot
 - Nutiple object per bean definition.
 - Spring container will have no reference to prototype it will just create and destroy.
 
+# Implement Caching
+- Caching is used to reduce the load in database becasue it will first check in cache if the same data is requested instead of multiple call in database. Thus reducing the database calls which is a network call and slow.
+
+[For More Comprehensive Tutorial](https://medium.com/vedity/spring-boot-caching-mechanism-8ef901147e60)
+
+## In memory caching
+- Data is stored in RAM.
+- Redis is widely known with this type of caching
+
+## Database Caching
+- Hibernate has first level caching by default
+
+## Annotations
+- `@Cacheable`: = Get
+- `@CacheEvict`: = Delete
+- `@CachePut`: = Put
+- `@Caching`: grouper like @Mappings in mapstruct
+
+
+
+# To use caching
+1. Annotate your applivation with @EnableCaching
+2. Annotate your methods with appropriate Caching Annotations.
+
+
 # [Annotations Notes](https://github.com/Elleined/spring-boot-annotations-notes)
 
 
