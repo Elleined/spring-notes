@@ -120,6 +120,39 @@ Notes for Spring and Spring Boot
 2. Annotate your methods with appropriate Caching Annotations.
 
 
+# Single table 
+- Generates a table container all fields from parent class and subclass causing a denormalized database schema but fast database operations.
+## @DicriminatorColumn for parent class
+## @DiscriminatorValue for sub class
+
+# Joined
+- Each subclass will have their own table with foreign key of parent class and that foreign key will also serve as primary key.
+## PrimaryKeyJoinColumn for custom name of foreign key
+
+# Table Per Class
+- Generate a separate table container all the fields from superclass and specific fields with independent table.
+## GenerationType.IDENTITY are not working here use TABLE, AUTO or SEQUENCE
+
+# Optimization
+- Use lazy loading
+- Use @BatchSize
+- Use Proper InheritanceType
+- Use Second Level Caching
+
+# @Inheritance
+- Used to defined a common values for each subclass, provide polymorphic queries and defined associations unlike @MappedSuperClass which is only used to share common fields.
+
+## Difference @MapperSuperClass and @Inheritance
+- Mapped Super Class is should be only used when you want a common field to be share in subclassess and dont require database operations in the class annotated with @MappedSuperClasss.
+- Inheritance is should be used when you want to share commom fields, polymorphic queries, and associations in your class annotated with @Inheritance and require database operations in the class annotated with @Inheritance.
+
+## Other related spring data jpa annotations
+- AssociationOverrides
+- AssociationOverride
+
+- AttributeOverrides
+- AttributeOverride
+
 # [Annotations Notes](https://github.com/Elleined/spring-boot-annotations-notes)
 
 
