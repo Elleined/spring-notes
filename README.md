@@ -113,13 +113,13 @@ Notes for Spring and Spring Boot
 - `@CachePut`: = Put
 - `@Caching`: grouper like @Mappings in mapstruct
 
-
-
 # To use caching
 1. Annotate your applivation with @EnableCaching
 2. Annotate your methods with appropriate Caching Annotations.
 
+# Spring Data JPA
 
+## Inheritance
 # Single table 
 - Generates a table container all fields from parent class and subclass causing a denormalized database schema but fast database operations.
 ## @DicriminatorColumn for parent class
@@ -152,6 +152,9 @@ Notes for Spring and Spring Boot
 
 - AttributeOverrides
 - AttributeOverride
+## [Spring Data JPA Inheritance Sample](https://medium.com/@iampraveenkumar/mastering-jpa-inheritance-strategies-hibernate-6-x-jpa-3-x-spring-boot-3-x-0n6eecac1147a)
+
+
 
 # [Annotations Notes](https://github.com/Elleined/spring-boot-annotations-notes)
 
