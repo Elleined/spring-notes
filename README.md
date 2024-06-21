@@ -153,6 +153,7 @@ Notes for Spring and Spring Boot
 - AttributeOverrides
 - AttributeOverride
 ## [Spring Data JPA Inheritance Sample](https://medium.com/@iampraveenkumar/mastering-jpa-inheritance-strategies-hibernate-6-x-jpa-3-x-spring-boot-3-x-0n6eecac1147a)
+## [Spring Data JPA Persisting Maps](https://www.baeldung.com/hibernate-persisting-maps)
 
 
 
