@@ -96,9 +96,11 @@ Notes for Spring and Spring Boot
 - Spring container will have no reference to prototype it will just create and destroy.
 
 # Implement Caching
-- Caching is used to reduce the load in database becasue it will first check in cache if the same data is requested instead of multiple call in database. Thus reducing the database calls which is a network call and slow.
+- Caching is used to reduce the load in database and network call because it will first check in cache if the same data is requested instead of multiple call in database and network call. Thus reducing the database and network calls which is a slow.
 
 [For More Comprehensive Tutorial](https://medium.com/vedity/spring-boot-caching-mechanism-8ef901147e60)
+
+[For more Comprehensive Tutorial 2](https://medium.com/javajams/how-to-supercharge-your-spring-boot-app-with-3-proven-optimization-techniques-95e00aaf22e2)
 
 ## In memory caching
 - Data is stored in RAM.
