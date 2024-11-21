@@ -132,6 +132,10 @@ Notes for Spring and Spring Boot
 ## [Spring Data JPA Inheritance Sample](https://medium.com/@iampraveenkumar/mastering-jpa-inheritance-strategies-hibernate-6-x-jpa-3-x-spring-boot-3-x-0n6eecac1147a)
 ## [Spring Data JPA Persisting Maps](https://www.baeldung.com/hibernate-persisting-maps)
 
+# Common Mistakes in using Spring Data JPA Inheritance
+- You cannot use Table Per Class to the parent entity containing a @ManyToOne Association it wil cause duplicate foreign key because technically tabler per class copy all the fields from parent so basically the error will occur. Use Joined instead in this case. Whenever you will have a field in parent that has @ManyToOne use joined automatically.
+- You cannot use IDENTITY in Table per class use TABLE strategy instead 
+
 
 
 # [Annotations Notes](https://github.com/Elleined/spring-boot-annotations-notes)
